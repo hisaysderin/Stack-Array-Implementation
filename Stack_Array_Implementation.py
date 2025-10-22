@@ -1,4 +1,4 @@
-# Stack array implementation
+# Stack array implementation in Python
 # No list functions at all used.
 
 # Get size from user
@@ -47,7 +47,10 @@ def is_full():
 # Get the top of the stack
 # top - 1 is used as the pointer points to where new items go
 def peek():
-    return stack[top - 1]
+    if is_empty():                              # Catching error
+        return "No value to peek"
+    else:
+        return stack[top - 1]
 
 
 # Getting user input as to what functions to do
